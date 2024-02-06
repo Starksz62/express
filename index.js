@@ -1,9 +1,6 @@
-const express = require("express");
-
-const app = express();
+const app = require('./app');
 
 const port = 5000;
-const router = require('./routes/routes')
 
 app
   .listen(port, () => {
@@ -12,5 +9,3 @@ app
   .on("error", (err) => {
     console.error("Error:", err.message);
   });
-
-  app.use('/', router);
